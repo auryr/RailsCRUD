@@ -1,0 +1,21 @@
+<div  class="big-container">
+	<h2><%=@progLanguage["name"]%></h2>
+	<h4><%=@progLanguage["description"]%></h4>
+	<h4><%=@progLanguage["version"]%></h4>
+    <div class="">
+        <%= link_to("Edit", edit_prog_language_path(@progLanguage)) %>
+        <%= button_to("Delete", @progLanguage, method: :delete) %>
+    </div>
+
+	<ul>
+	  	<% @errorMsgs.each do |msg| %>
+	  		<div class="detail">
+				<li>
+					<h3><%=msg.message %></h3>
+					<%= link_to "Check the error information ", error_msg_path(@errorMsgs, msg) %>
+				</li>
+			</div>
+	  	<% end %>
+	</ul>
+
+</div>

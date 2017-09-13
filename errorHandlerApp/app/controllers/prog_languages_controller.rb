@@ -1,5 +1,5 @@
 class ProgLanguagesController < ApplicationController
-
+  before_action :set_values, only: [:show, :edit, :update, :destroy]
   def index
     @progLanguages= ProgLanguage.all
   end
@@ -14,7 +14,7 @@ class ProgLanguagesController < ApplicationController
   end
 
   def create
-    @progLanguage = ProgLanguage.new(create_params)
+    @progLanguage = ProgLanguage.new(get_values)
 
     if @progLanguage.save
       flash[:notice] = 'Done'
@@ -25,11 +25,37 @@ class ProgLanguagesController < ApplicationController
     end
   end
 
+  def edit
+    @progLanguage= ProgLanguage.find(params[:id])
+  end
+
+  def update
+    if @progLanguage.update(get_values)
+      redirect_to @progLanguage
+    else
+      redirect_back fallback_location: prog_languages_path(@progLanguage)
+    end
+  end
+
+
+  def destroy
+    if @progLanguage.destroy
+      redirect_to prog_languages_path
+    else
+      redirect_back fallback_location: @progLanguage
+    end
+  end
+
   private
 
-  def create_params
+  def get_values
     params.require(:prog_language).permit(:name, :description, :version)
   end
+
+  def set_values
+    @progLanguage = ProgLanguage.find(params[:id])
+  end
+
 
 end
 
