@@ -1,0 +1,101 @@
+textarea{
+    border: 1px solid #979797;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    margin: 10px auto;
+    height: 20vh;
+    width: 50%;
+    padding: 20px 10px;
+    font-size: 14px;
+    background-color: #FEFCF9;
+}
+
+* {
+    list-style-type: none;
+    font-family: 'Avenir Next', sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    word-wrap: break-word;
+    color: #1BA5B8;
+
+}
+
+
+body {
+    font-family: 'Avenir Next', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+    margin-top: 44px;
+    background-color: #FEFCF9;
+}
+
+label{
+    text-align: right;
+    font-size: 20px;
+    margin: 4px;
+    color: #544CAF;
+}
+
+
+label{
+  display: block;
+  text-align: left;
+}
+
+input[type=text],input[type=password]
+input[type=email],input[type=date],input[type=password],
+,input[type=email]{
+    background-color: #FEFCF9;
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    border: 1px solid #979797;
+    border-radius: 3px;
+    text-align: left;
+    font-size: 25px;
+    width: 20%;
+}
+
+input[type=radio] {
+    margin-bottom: 25px;
+}
+
+input[type=time],input[type=date] {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 20px;
+    width: 12vh;
+}
+
+input[type=submit],.button-span {
+    display: inline-block;
+    width: 8em;
+    color: white;
+    background-color:#FF404E;
+    padding: 10px 10px;
+    margin: 8px 0;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+
+.sub-container {
+    height: 95vh;
+    border-radius: 10px;
+    display: flex;
+}
+
+.main-container {
+    width: 60%;
+    border-radius: 10px;
+    position: relative;
+    padding: 10px;
+    margin: auto;
+    box-shadow: 0 0 10px #040000;
+}

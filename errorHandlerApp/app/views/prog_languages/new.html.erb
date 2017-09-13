@@ -1,0 +1,19 @@
+
+<div class="main-container">
+
+	<h1 clas="tittle">Language</h1>
+
+	<%= form_for @proglanguage do |create_f| %>
+	  <label>Name</label>
+	  <%= create_f.text_field :name %>
+	  <br>
+	  <label>Description</label>
+	  <%= create_f.text_area :description  %>
+
+	  <br>
+	  <label>Version</label>
+	  <%= create_f.text_field :version %>
+	  <br>
+	  <%= submit_tag 'Submit' %>
+	<% end %>
+</div>
