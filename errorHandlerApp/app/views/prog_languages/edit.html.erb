@@ -1,0 +1,22 @@
+<h2>Update</h2>
+<div class="big-container">
+
+    <%= form_for @progLanguage do |form| %>
+
+      <%= label_tag :name %>
+      <%= form.text_field :name, placeholder: 'Name' %>
+      <br>
+      <%= label_tag :description %>
+      <br>
+      <%= form.text_area :description, placeholder: 'Description' %>
+
+      <br>
+
+      <%= label_tag :version %>
+      <%= form.text_field :version, placeholder: 'Version' %>
+
+      <br>
+      <%= submit_tag 'Edit' %>
+    <% end %>
+</div>
+
